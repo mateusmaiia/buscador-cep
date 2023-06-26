@@ -59,4 +59,10 @@
   justify-content: center;
 
   cursor: pointer;
+
+  transition: transform 0.5s;
+}
+
+.button-search:hover {
+  transform: scale(1.2);
 }
