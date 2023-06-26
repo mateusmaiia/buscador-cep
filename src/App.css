@@ -22,3 +22,41 @@
     transform: rotateX(0deg);
   }
 }
+
+.container-input {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  margin: 34px 0;
+  display: flex;
+  border-radius: 8px;
+  gap: 8px;
+
+  box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.container-input input {
+  background: transparent;
+  border: none;
+  outline: none;
+
+  font-size: 20px;
+  color: #fff;
+  /* margin-right: 8px;  Na aula usou, mas fica melhor como opção usar o "gap" no 
+  .container-input, pois ele tem display flex.
+  */
+}
+
+.container-input input::placeholder {
+  color: #f1f1f1;
+}
+
+.button-search {
+  background: transparent;
+  border: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
