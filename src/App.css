@@ -7,7 +7,7 @@
   background: linear-gradient(#121212, #212b46);
 }
 
-/* .title {
+.title {
   font-size: 85px;
   color: #fff;
 
@@ -21,4 +21,4 @@
   to {
     transform: rotateX(0deg);
   }
-} */
+}
