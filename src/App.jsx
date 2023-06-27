@@ -6,6 +6,7 @@ import './App.css'
 export function App() {
   
   const [input, setInput] = useState('')
+  const [cep, setCep] = useState({})
 
   async function handleSearch(){
     //01310930/json/
@@ -18,7 +19,8 @@ export function App() {
 
     try{
       const response = await api.get(`${input}/json`)
-      console.log(response)
+      setCep(response.data)
+      setInput('')
     }catch{
       alert('Ops! Error algo buscar.')
       setInput('')
@@ -42,15 +44,17 @@ export function App() {
             <FiSearch size={25} color='#fff'/>
          </button>
       </div>
+      {Object.keys(cep).length > 0 && (
+        <main className="main">
+        <h2>CEP: {cep.cep}</h2>
 
-      <main className="main">
-        <h2>CEP: 890320093</h2>
-
-        <span>Rua Teste Algum</span>
-        <span>Algum complemento</span>
-        <span>Vila Rosa</span>
-        <span>Campo Grande/MS</span>
+        <span>{cep.logradouro}</span>
+        <span>Complemento: {cep.complemento}</span>
+        <span>{cep.bairro}</span>
+        <span>{cep.localidade} - {cep.uf}</span>
       </main>
+      )}
+      
     </div>
   )
 }
