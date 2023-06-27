@@ -66,3 +66,24 @@
 .button-search:hover {
   transform: scale(1.2);
 }
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  background: #fff;
+  width: 500px;
+  border-radius: 8px;
+}
+
+.main h2 {
+  margin: 16px 0;
+  font-size: 39px;
+}
+
+.main span {
+  margin-bottom: 16px;
+  font-weight: bold;
+}
