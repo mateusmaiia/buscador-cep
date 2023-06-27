@@ -1,4 +1,4 @@
-
+import { api } from './services/api'
 import { useState } from 'react'
 import { FiSearch } from 'react-icons/fi'
 import './App.css'
@@ -7,8 +7,23 @@ export function App() {
   
   const [input, setInput] = useState('')
 
-  function handleSearch(){
-    alert('certo')
+  async function handleSearch(){
+    //01310930/json/
+
+    if(input === ''){
+      alert('preencha algum CEP')
+    }{
+      console.log('')
+    }
+
+    try{
+      const response = await api.get(`${input}/json`)
+      console.log(response)
+    }catch{
+      alert('Ops! Error algo buscar.')
+      setInput('')
+    }
+
   }
 
   return (
